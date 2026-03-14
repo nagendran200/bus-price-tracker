@@ -1,0 +1,258 @@
+.bus-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.bus-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.bus-card.live {
+  border-color: #4CAF50;
+  background: linear-gradient(to right, #ffffff 99%, #4CAF50 1%);
+}
+
+.bus-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.bus-name h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.bus-type {
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #666;
+}
+
+.live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #e8f5e9;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4CAF50;
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  background: #4CAF50;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+.bus-route {
+  margin-bottom: 20px;
+}
+
+.route-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.departure, .arrival {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.time {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.location {
+  font-size: 14px;
+  color: #666;
+}
+
+.route-line {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.duration {
+  font-size: 12px;
+  color: #999;
+  white-space: nowrap;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #e0e0e0 50%, transparent 50%);
+  background-size: 10px 2px;
+  position: relative;
+}
+
+.line::before,
+.line::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #2196F3;
+  border-radius: 50%;
+  top: -3px;
+}
+
+.line::before {
+  left: 0;
+}
+
+.line::after {
+  right: 0;
+}
+
+.bus-details {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-item .label {
+  font-size: 12px;
+  color: #999;
+}
+
+.detail-item .value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.seats {
+  color: #2196F3;
+}
+
+.rating {
+  color: #FF9800;
+}
+
+.bus-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.current-price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.current-price .label {
+  font-size: 12px;
+  color: #999;
+}
+
+.current-price .price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.price-change {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.price-change.price-up {
+  background: #ffebee;
+  color: #f44336;
+}
+
+.price-change.price-down {
+  background: #e8f5e9;
+  color: #4CAF50;
+}
+
+.price-change .icon {
+  font-size: 16px;
+}
+
+.bus-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.bus-actions button {
+  flex: 1;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #2196F3;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1976D2;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.btn-secondary:hover {
+  background: #e0e0e0;
+}
